@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodDelivery - Доставка еды</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">FoodDelivery</div>
+        <nav>
+            <ul>
+                <li><a href="#menu">Меню</a></li>
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+            </ul>
+        </nav>
+        <div class="cart">
+            <span id="cart-count">0</span>
+            <button id="cart-btn">Корзина</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Доставка вкусной еды</h1>
+            <p>Быстро, вкусно и прямо к вашей двери</p>
+            <button class="order-btn">Заказать сейчас</button>
+        </section>
+
+        <section id="menu" class="menu-section">
+            <h2>Наше меню</h2>
+            <div class="menu-categories">
+                <button class="category-btn active" data-category="all">Все</button>
+                <button class="category-btn" data-category="pizza">Пицца</button>
+                <button class="category-btn" data-category="burger">Бургеры</button>
+                <button class="category-btn" data-category="salad">Салаты</button>
+                <button class="category-btn" data-category="drink">Напитки</button>
+            </div>
+            <div class="menu-items" id="menu-items">
+                <!-- Товары будут загружаться через JavaScript -->
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <h2>О нашем сервисе</h2>
+            <p>Мы доставляем свежую и вкусную еду с 2010 года. Наши повара - профессионалы своего дела, а курьеры всегда привозят заказы вовремя.</p>
+        </section>
+    </main>
+
+    <footer id="contacts">
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Контакты</h3>
+                <p>Телефон: +7 (123) 456-78-90</p>
+                <p>Email: info@fooddelivery.ru</p>
+                <p>Адрес: г. Москва, ул. Примерная, 123</p>
+            </div>
+            <div class="social-links">
+                <h3>Мы в соцсетях</h3>
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">Telegram</a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 FoodDelivery. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <!-- Модальное окно корзины -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Ваша корзина</h2>
+            <div id="cart-items">
+                <!-- Товары в корзине -->
+                <p class="empty-cart">Корзина пуста</p>
+            </div>
+            <div class="cart-total">
+                <p>Итого: <span id="total-price">0</span> руб.</p>
+                <button id="checkout-btn">Оформить заказ</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
